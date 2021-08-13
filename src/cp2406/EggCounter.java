@@ -9,17 +9,20 @@ public class EggCounter {
         Scanner stdin = new Scanner( System.in );   // create new Scanner
 
         int numberOfEggs;   // The number of eggs.
+        int gross;          // The number of gross.
         int dozens;         // The number of dozens.
-        int leftOvers;      // The nubmer of eggs left over.
+        int leftOvers;      // The number of eggs left over.
 
         System.out.print("How many eggs do you have: ");
         numberOfEggs = stdin.nextInt();
 
-        dozens = numberOfEggs / 12;
-        leftOvers = numberOfEggs % 12;
+        gross = numberOfEggs / 144;
+        dozens = (numberOfEggs % 144) / 12;
+        leftOvers = (numberOfEggs % 144) % 12;
 
-        System.out.printf("You have %d dozens, with %d eggs left over.", dozens, leftOvers);
-
+        System.out.printf(""" 
+    Your number of eggs is %d gross, %d dozens, and %d.""",
+                gross, dozens, leftOvers);
 
     }   // end of main()
 }   // end of class
