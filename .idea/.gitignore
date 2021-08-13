@@ -6,5 +6,5 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
-/uiDesigner.xml
-/vcs.xml
+uiDesigner.xml
+vcs.xml
